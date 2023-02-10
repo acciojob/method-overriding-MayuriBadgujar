@@ -1,0 +1,25 @@
+Index: src/main/java/com/driver/Main.java
+IDEA additional info:
+Subsystem: com.intellij.openapi.diff.impl.patch.BaseRevisionTextPatchEP
+<+>package com.driver;\r\n\r\npublic class Main {\r\n\r\n    public static class A{\r\n\r\n        public String meth(){\r\n            return \"Invoking method from class A\";\r\n        }\r\n\r\n        public static class B extends A{\r\n\r\n            @Override\r\n            public String meth(){\r\n                return \"Method is overridden in Extendend class B\";\r\n            }\r\n            public static void main(String[] args){\r\n                B b=new B();\r\n                b.meth();\r\n            }\r\n        }\r\n    }\r\n  \r\n}
+Subsystem: com.intellij.openapi.diff.impl.patch.CharsetEP
+<+>UTF-8
+===================================================================
+diff --git a/src/main/java/com/driver/Main.java b/src/main/java/com/driver/Main.java
+--- a/src/main/java/com/driver/Main.java	
++++ b/src/main/java/com/driver/Main.java	
+@@ -17,8 +17,11 @@
+             public static void main(String[] args){
+                 B b=new B();
+                 b.meth();
++
++                B b1 =new B();
++                b.meth();
+             }
+         }
+     }
+-  
+-}
+\ No newline at end of file
++
++}
